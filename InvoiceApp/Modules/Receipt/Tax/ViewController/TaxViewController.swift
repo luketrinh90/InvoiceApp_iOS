@@ -28,6 +28,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
     weak var actionToEnable : UIAlertAction?
     var viewModel: TaxViewModel?
     var priceOptions: [Int: Bool]?
+    var validatePrice: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,15 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
         if let model = viewModel {
             model.delegate = self
             model.checkTextField()
+            
+            let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
+            if language != "en" {
+                //validate in delegate
+                validatePrice = "\\,.{3,}"
+            } else {
+                //validate in delegate
+                validatePrice = "\\..{3,}"
+            }
         }
     }
     
@@ -72,7 +82,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         // max 2 fractional digits allowed
         let newText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        let regex = try! NSRegularExpression(pattern: "\\..{3,}", options: [])
+        let regex = try! NSRegularExpression(pattern: validatePrice!, options: [])
         let matches = regex.matchesInString(newText, options:[], range:NSMakeRange(0, newText.characters.count))
         guard matches.count == 0 else { return false }
         
@@ -85,6 +95,19 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
             var decimalCount = 0
             for character in array! {
                 if character == "." {
+                    decimalCount += 1
+                }
+            }
+            if decimalCount == 1 {
+                return false
+            } else {
+                return true
+            }
+        case ",":
+            let array = textField.text?.characters.map { String($0) }
+            var decimalCount = 0
+            for character in array! {
+                if character == "," {
                     decimalCount += 1
                 }
             }
@@ -124,7 +147,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
         if trimmedString.characters.count == 0 {
             sender.text = ""
         } else {
-            if trimmedString.characters.first == "." {
+            if trimmedString.characters.first == "." || trimmedString.characters.first == "," {
                 sender.text = ""
             }
         }
@@ -162,17 +185,13 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
     func inputPrice(textField: UITextField, range: NSRange, string: String) {
         let userEnteredString = textField.text
         let newString = (userEnteredString! as NSString).stringByReplacingCharactersInRange(range, withString: string) as NSString
+        let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
         
         if newString == "" {
             clearTextField()
         } else {
             
             let inputPrice = Double(newString as String)?.roundToPlaces(2)
-            
-            
-            
-            
-            
             
             for (key, value) in priceOptions! {
                 if key == 19 && value == false {
@@ -184,6 +203,15 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             } else {
                                 if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
                                     tf0.text = String(price - inputPrice)
+                                    
+                                    
+                                    if language != "en" {
+                                        
+                                    } else {
+                                        
+                                    }
+                                    
+                                    
                                 }
                             }
                         } else if textField.tag == 2 {
@@ -192,6 +220,11 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             } else {
                                 if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
                                     tf7.text = String(price - inputPrice)
+                                    if language != "en" {
+                                        
+                                    } else {
+                                        
+                                    }
                                 }
                             }
                         }

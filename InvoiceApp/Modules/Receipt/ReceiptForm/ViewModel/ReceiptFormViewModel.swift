@@ -166,7 +166,14 @@ class ReceiptFormViewModel: NSObject {
             try! realm.write {
                 //
                 if newString != "" {
-                    dele.passedReceiptObject?.price = Double(newString)!.roundToPlaces(2)
+                    
+                    if newString.containsString(",") {
+                        let replaceString = newString.replace(",", withString:".")
+                        dele.passedReceiptObject?.price = Double(replaceString)!.roundToPlaces(2)
+                    } else {
+                        dele.passedReceiptObject?.price = Double(newString)!.roundToPlaces(2)
+                    }
+                    
                 } else {
                     dele.passedReceiptObject?.price = 0.0
                 }
@@ -180,5 +187,11 @@ class ReceiptFormViewModel: NSObject {
             NSCharacterSet.whitespaceAndNewlineCharacterSet()
         )
         return trimmedString
+    }
+}
+
+extension String {
+    func replace(target: String, withString: String) -> String {
+        return self.stringByReplacingOccurrencesOfString(target, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
     }
 }

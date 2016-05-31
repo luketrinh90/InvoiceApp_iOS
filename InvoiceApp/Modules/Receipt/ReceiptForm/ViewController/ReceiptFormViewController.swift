@@ -28,6 +28,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
     weak var actionToEnable : UIAlertAction?
     var viewModel: ReceiptFormViewModel?
     var imagePath: String?
+    var validatePrice: String?
     
     var priceOptions: [Int: Bool] = [
         19 : false,
@@ -53,9 +54,15 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
             if language != "en" {
                 tfCategory.text = NSLocalizedString((passedReceiptObject?.category)! + "Review",comment:"")
                 tfType.text = NSLocalizedString((passedReceiptObject?.type)! + "Review",comment:"")
+                
+                //validate in delegate
+                validatePrice = "\\,.{3,}"
             } else {
                 tfCategory.text = NSLocalizedString((passedReceiptObject?.category)!,comment:"")
                 tfType.text = NSLocalizedString((passedReceiptObject?.type)!,comment:"")
+                
+                //validate in delegate
+                validatePrice = "\\..{3,}"
             }
         }
     }
@@ -71,7 +78,15 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
         
         if let price = passedReceiptObject?.price {
             if price != 0.0 {
-                tfPrice.text = String(Double(price).roundToPlaces(2))
+                
+                let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
+                if language != "en" {
+                    let replaceString = String(price).replace(".", withString:",")
+                    tfPrice.text = replaceString
+                } else {
+                    tfPrice.text = String(Double(price).roundToPlaces(2))
+                }
+                
                 btnPlus.userInteractionEnabled = true
                 btnPlus.alpha = 1
             } else {
@@ -182,7 +197,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
         if textField.tag == 1 {
             // max 2 fractional digits allowed
             let newText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-            let regex = try! NSRegularExpression(pattern: "\\..{3,}", options: [])
+            let regex = try! NSRegularExpression(pattern: validatePrice!, options: [])
             let matches = regex.matchesInString(newText, options:[], range:NSMakeRange(0, newText.characters.count))
             guard matches.count == 0 else { return false }
             
@@ -195,6 +210,19 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
                 var decimalCount = 0
                 for character in array! {
                     if character == "." {
+                        decimalCount += 1
+                    }
+                }
+                if decimalCount == 1 {
+                    return false
+                } else {
+                    return true
+                }
+            case ",":
+                let array = textField.text?.characters.map { String($0) }
+                var decimalCount = 0
+                for character in array! {
+                    if character == "," {
                         decimalCount += 1
                     }
                 }
@@ -236,7 +264,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
         if trimmedString.characters.count == 0 {
             sender.text = ""
         } else {
-            if trimmedString.characters.first == "." {
+            if trimmedString.characters.first == "." || trimmedString.characters.first == "," {
                 sender.text = ""
             }
         }

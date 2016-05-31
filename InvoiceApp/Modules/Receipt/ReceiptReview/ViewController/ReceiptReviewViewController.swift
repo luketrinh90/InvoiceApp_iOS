@@ -57,29 +57,57 @@ class ReceiptReviewViewController: UITableViewController {
     }
     
     func processShowTax() {
+        let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
+        
         if let price = passedTaxPriceObject {
             if price.priceTax19 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "19%"
-                    tfFirstTax.text = String(price.priceTax19)
+                    if language != "en" {
+                        let replaceString = String(price.priceTax19).replace(".", withString:",")
+                        tfFirstTax.text = replaceString
+                    } else {
+                        tfFirstTax.text = String(price.priceTax19)
+                    }
                 }
             }
             if price.priceTax7 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "7%"
-                    tfFirstTax.text = String(price.priceTax7)
+                    if language != "en" {
+                        let replaceString = String(price.priceTax7).replace(".", withString:",")
+                        tfFirstTax.text = replaceString
+                    } else {
+                        tfFirstTax.text = String(price.priceTax7)
+                    }
+                    
                 } else if tfSecondTax.text == "" {
                     lblSecondTax.text = "7%"
-                    tfSecondTax.text = String(price.priceTax7)
+                    if language != "en" {
+                        let replaceString = String(price.priceTax7).replace(".", withString:",")
+                        tfSecondTax.text = replaceString
+                    } else {
+                        tfSecondTax.text = String(price.priceTax7)
+                    }
                 }
             }
             if price.priceTax0 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "0%"
-                    tfFirstTax.text = String(price.priceTax0)
+                    if language != "en" {
+                        let replaceString = String(price.priceTax0).replace(".", withString:",")
+                        tfFirstTax.text = replaceString
+                    } else {
+                        tfFirstTax.text = String(price.priceTax0)
+                    }
                 } else if tfSecondTax.text == "" {
                     lblSecondTax.text = "0%"
-                    tfSecondTax.text = String(price.priceTax0)
+                    if language != "en" {
+                        let replaceString = String(price.priceTax0).replace(".", withString:",")
+                        tfSecondTax.text = replaceString
+                    } else {
+                        tfSecondTax.text = String(price.priceTax0)
+                    }
                 }
             }
         }
@@ -88,16 +116,20 @@ class ReceiptReviewViewController: UITableViewController {
     func showDetail() {
         if let receipt = passedReceiptObject {
             tfName.text = receipt.name
-            tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price)
             tfNote.text = receipt.note
-            //
+            
             let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
             if language != "en" {
                 tfCategory.text = NSLocalizedString(receipt.category + "Review",comment:"")
                 tfType.text = NSLocalizedString(receipt.type + "Review",comment:"")
+                //
+                let replaceString = String(receipt.price).replace(".", withString:",")
+                tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + replaceString
             } else {
                 tfCategory.text = NSLocalizedString(receipt.category,comment:"")
                 tfType.text = NSLocalizedString(receipt.type,comment:"")
+                //
+                tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price)
             }
         }
         

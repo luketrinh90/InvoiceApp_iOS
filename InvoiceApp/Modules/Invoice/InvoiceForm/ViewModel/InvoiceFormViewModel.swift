@@ -30,11 +30,8 @@ class InvoiceFormViewModel: NSObject {
             //datePicker
             let datePickerView  : UIDatePicker = UIDatePicker()
             datePickerView.datePickerMode = UIDatePickerMode.Date
-            datePickerView.minimumDate = NSDate()
             
             dele.tfDate.inputView = datePickerView
-                    dele.tfDate.font = UIFont.systemFontOfSize(22, weight: UIFontWeightThin)
-           
             
             setDefaultDate()
             
