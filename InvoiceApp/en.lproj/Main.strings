@@ -1,0 +1,174 @@
+
+/* Class = "UILabel"; text = "0%"; ObjectID = "4RP-t4-DIr"; */
+"4RP-t4-DIr.text" = "0%";
+
+/* Class = "UITextField"; placeholder = "currency"; ObjectID = "4o2-L7-E9r"; */
+"4o2-L7-E9r.placeholder" = "currency";
+
+/* Class = "UITextField"; placeholder = "type"; ObjectID = "6D8-v1-3oS"; */
+"6D8-v1-3oS.placeholder" = "type";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "7KK-Y9-3Px"; */
+"7KK-Y9-3Px.text" = "Category";
+
+/* Class = "UITextField"; placeholder = "start date"; ObjectID = "7Zb-6I-ys3"; */
+"7Zb-6I-ys3.placeholder" = "start date";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8UA-zZ-e7u"; */
+"8UA-zZ-e7u.text" = "Label";
+
+/* Class = "UILabel"; text = "To: 02/12/2016"; ObjectID = "8im-7w-5Ux"; */
+"8im-7w-5Ux.text" = "To: 02/12/2016";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B4U-GP-7uo"; */
+"B4U-GP-7uo.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "note"; ObjectID = "BHe-RC-CHh"; */
+"BHe-RC-CHh.placeholder" = "note";
+
+/* Class = "UILabel"; text = "Invoice ABC"; ObjectID = "DLF-75-572"; */
+"DLF-75-572.text" = "Invoice ABC";
+
+/* Class = "UILabel"; text = "19%"; ObjectID = "FKb-Zh-DsD"; */
+"FKb-Zh-DsD.text" = "19%";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "FhO-cX-urd"; */
+"FhO-cX-urd.text" = "Receipt";
+
+/* Class = "UITextField"; placeholder = "occasion"; ObjectID = "IAY-WF-C0X"; */
+"IAY-WF-C0X.placeholder" = "occasion";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "J9a-V0-4gY"; */
+"J9a-V0-4gY.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "JBy-p4-oAg"; */
+"JBy-p4-oAg.text" = "Price";
+
+/* Class = "UILabel"; text = "Review"; ObjectID = "LU1-fS-sDb"; */
+"LU1-fS-sDb.text" = "Review";
+
+/* Class = "UITextField"; placeholder = "category"; ObjectID = "MeW-kI-L5Q"; */
+"MeW-kI-L5Q.placeholder" = "category";
+
+/* Class = "UITextField"; placeholder = "invoice name"; ObjectID = "MtO-cC-lqi"; */
+"MtO-cC-lqi.placeholder" = "invoice name";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "NW3-wz-Hg6"; */
+"NW3-wz-Hg6.text" = "Type";
+
+/* Class = "UIButton"; normalTitle = "Tap Here"; ObjectID = "Omi-PI-vVj"; */
+"Omi-PI-vVj.normalTitle" = "Tap Here";
+
+/* Class = "UITextField"; placeholder = "tap the + button"; ObjectID = "Ovz-hC-Nod"; */
+"Ovz-hC-Nod.placeholder" = "tap the + button";
+
+/* Class = "UITextField"; placeholder = "input price for 0% tax"; ObjectID = "RGT-p8-ASr"; */
+"RGT-p8-ASr.placeholder" = "input price for 0% tax";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "RQP-Bo-z7S"; */
+"RQP-Bo-z7S.text" = "Type";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "T6m-l8-a83"; */
+"T6m-l8-a83.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "VEf-DN-NLa"; */
+"VEf-DN-NLa.text" = "Receipt";
+
+/* Class = "UITextField"; placeholder = "name"; ObjectID = "Vgt-zn-Ocq"; */
+"Vgt-zn-Ocq.placeholder" = "name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WT4-dx-F4Z"; */
+"WT4-dx-F4Z.text" = "Label";
+
+/* Class = "UILabel"; text = "Tax & Price"; ObjectID = "Xex-Dc-p87"; */
+"Xex-Dc-p87.text" = "Tax & Price";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "XuQ-oS-YHE"; */
+"XuQ-oS-YHE.text" = ">";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y7C-iK-uAe"; */
+"Y7C-iK-uAe.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "input price for 7% tax"; ObjectID = "YQw-CO-XO5"; */
+"YQw-CO-XO5.placeholder" = "input price for 7% tax";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "bXk-O7-gFS"; */
+"bXk-O7-gFS.text" = ">";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "bhC-ZR-iTm"; */
+"bhC-ZR-iTm.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bhy-Ah-YTl"; */
+"bhy-Ah-YTl.text" = "Label";
+
+/* Class = "UILabel"; text = "No data is available"; ObjectID = "btb-7F-ruh"; */
+"btb-7F-ruh.text" = "No data is available";
+
+/* Class = "UILabel"; text = ">"; ObjectID = "cGz-Rb-d4h"; */
+"cGz-Rb-d4h.text" = ">";
+
+/* Class = "UILabel"; text = "No data is available"; ObjectID = "cjU-dJ-NAd"; */
+"cjU-dJ-NAd.text" = "No data is available";
+
+/* Class = "UILabel"; text = "Photos"; ObjectID = "eoP-UL-6u2"; */
+"eoP-UL-6u2.text" = "Photos";
+
+/* Class = "UILabel"; text = "7%"; ObjectID = "hX3-R0-3QQ"; */
+"hX3-R0-3QQ.text" = "7%";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "jXc-8T-Y8n"; */
+"jXc-8T-Y8n.text" = "Category";
+
+/* Class = "UITextField"; placeholder = "note"; ObjectID = "k4i-sE-gZP"; */
+"k4i-sE-gZP.placeholder" = "note";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "l6w-q7-mhJ"; */
+"l6w-q7-mhJ.text" = "Name";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "nWl-EX-AJX"; */
+"nWl-EX-AJX.text" = "Receipt";
+
+/* Class = "UILabel"; text = "Note"; ObjectID = "oEo-uZ-k2X"; */
+"oEo-uZ-k2X.text" = "Note";
+
+/* Class = "UITextField"; placeholder = "input price for 19% tax"; ObjectID = "omi-gW-TDa"; */
+"omi-gW-TDa.placeholder" = "input price for 19% tax";
+
+/* Class = "UITextField"; placeholder = "employees name"; ObjectID = "p6p-di-JLa"; */
+"p6p-di-JLa.placeholder" = "employees name";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "pRH-xb-n1f"; */
+"pRH-xb-n1f.text" = "Receipt";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qKf-5O-fqp"; */
+"qKf-5O-fqp.text" = "Label";
+
+/* Class = "UILabel"; text = "New Invoice"; ObjectID = "rT1-Zi-ahh"; */
+"rT1-Zi-ahh.text" = "New Invoice";
+
+/* Class = "UITextField"; placeholder = "your name"; ObjectID = "rma-Nm-YIf"; */
+"rma-Nm-YIf.placeholder" = "your name";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "sNQ-fX-bib"; */
+"sNQ-fX-bib.text" = "Receipt";
+
+/* Class = "UILabel"; text = "PDF View"; ObjectID = "tpN-le-w9B"; */
+"tpN-le-w9B.text" = "PDF View";
+
+/* Class = "UILabel"; text = "Please input your price below"; ObjectID = "usJ-P2-6hr"; */
+"usJ-P2-6hr.text" = "Please input your price below";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "v5Z-fY-8aS"; */
+"v5Z-fY-8aS.text" = "Label";
+
+/* Class = "UILabel"; text = "Invoice"; ObjectID = "wqn-vR-hoe"; */
+"wqn-vR-hoe.text" = "Invoice";
+
+/* Class = "UILabel"; text = "From: 01/08/2016"; ObjectID = "yX5-gn-nXf"; */
+"yX5-gn-nXf.text" = "From: 01/08/2016";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yYv-eJ-07B"; */
+"yYv-eJ-07B.text" = "Label";
+
+/* Class = "UILabel"; text = "Receipt"; ObjectID = "zgC-S7-Piy"; */
+"zgC-S7-Piy.text" = "Receipt";
