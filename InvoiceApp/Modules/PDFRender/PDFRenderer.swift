@@ -86,6 +86,7 @@ class PDFRenderer {
         CGContextStrokePath(context)
     }
     
+    //pass invoice object
     static func drawDataTable(data:Results<Receipt>, nextRow:Int, invoice:Invoice) -> Int {
         
         let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
