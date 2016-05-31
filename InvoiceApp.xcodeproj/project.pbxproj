@@ -16,6 +16,7 @@
 		29D232B11CEB0C3F000AE253 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D232B01CEB0C3F000AE253 /* PDFRenderer.swift */; };
 		29D232B31CEB119B000AE253 /* PdfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D232B21CEB119B000AE253 /* PdfViewController.swift */; };
 		29D232BA1CEB154C000AE253 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D232B81CEB154C000AE253 /* logo.png */; };
+		8BCD2F2BA87424DF4081B7E6 /* Pods_InvoiceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5842B8F591F52CBD8BAB7B8 /* Pods_InvoiceApp.framework */; };
 		A4104E251CE0801F00FB1094 /* InvoiceFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4104E241CE0801F00FB1094 /* InvoiceFormViewController.swift */; };
 		A410D05D1CF2BA6C00290599 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A410D05F1CF2BA6C00290599 /* Localizable.strings */; };
 		A4148B641CE1E1B80087D1B8 /* ReceiptFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4148B631CE1E1B80087D1B8 /* ReceiptFormViewController.swift */; };
@@ -61,7 +62,6 @@
 		A4EB90001CE06BB000F588E3 /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB8FFE1CE06BB000F588E3 /* InvoiceViewController.swift */; };
 		A4EB90051CE0718300F588E3 /* InvoiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB90041CE0718300F588E3 /* InvoiceTableViewCell.swift */; };
 		A4EB90071CE0769500F588E3 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EB90061CE0769500F588E3 /* Invoice.swift */; };
-		C461F1328E87E3992C880F29 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372834602D91CB194915DCB7 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F5AE3380A5D7F93076F95F2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		295403B51CED79DE00CE01E3 /* invoice-app-icon-ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invoice-app-icon-ios.png"; sourceTree = "<group>"; };
 		295403C21CEDC2EF00CE01E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Category.plist; sourceTree = "<group>"; };
 		295403C61CEDC6A600CE01E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Showcase.plist; sourceTree = "<group>"; };
@@ -93,7 +92,8 @@
 		29D232B21CEB119B000AE253 /* PdfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PdfViewController.swift; path = PDFRender/PdfViewController.swift; sourceTree = "<group>"; };
 		29D232B81CEB154C000AE253 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = PDFRender/logo.png; sourceTree = "<group>"; };
 		372834602D91CB194915DCB7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D02B7429D33EEEC123C5649 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		875BA45DB21F2F19DD7F9B70 /* Pods-InvoiceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InvoiceApp/Pods-InvoiceApp.release.xcconfig"; sourceTree = "<group>"; };
+		8CBC4A4EBF65B09FE64FFAEF /* Pods-InvoiceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvoiceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InvoiceApp/Pods-InvoiceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A4104E241CE0801F00FB1094 /* InvoiceFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceFormViewController.swift; sourceTree = "<group>"; };
 		A410D0541CF2AF6A00290599 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = de; path = de.lproj/Category.plist; sourceTree = "<group>"; };
 		A410D05E1CF2BA6C00290599 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 		A4EB8FFE1CE06BB000F588E3 /* InvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		A4EB90041CE0718300F588E3 /* InvoiceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceTableViewCell.swift; sourceTree = "<group>"; };
 		A4EB90061CE0769500F588E3 /* Invoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
+		B5842B8F591F52CBD8BAB7B8 /* Pods_InvoiceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InvoiceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C461F1328E87E3992C880F29 /* Pods.framework in Frameworks */,
+				8BCD2F2BA87424DF4081B7E6 /* Pods_InvoiceApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18CA4B20D9A25B6304F1FBF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CBC4A4EBF65B09FE64FFAEF /* Pods-InvoiceApp.debug.xcconfig */,
+				875BA45DB21F2F19DD7F9B70 /* Pods-InvoiceApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29D232AF1CEB0C0A000AE253 /* PDFRender */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +301,8 @@
 				A4A8E6561CE04CE700FC74D1 /* InvoiceAppTests */,
 				A4A8E6611CE04CE700FC74D1 /* InvoiceAppUITests */,
 				A4A8E6401CE04CE700FC74D1 /* Products */,
-				B7D51E719C7CBDF2D896A9AF /* Pods */,
 				A91D973970090040C5963F70 /* Frameworks */,
+				18CA4B20D9A25B6304F1FBF8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -670,17 +680,9 @@
 			isa = PBXGroup;
 			children = (
 				372834602D91CB194915DCB7 /* Pods.framework */,
+				B5842B8F591F52CBD8BAB7B8 /* Pods_InvoiceApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B7D51E719C7CBDF2D896A9AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1F5AE3380A5D7F93076F95F2 /* Pods.debug.xcconfig */,
-				4D02B7429D33EEEC123C5649 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -690,12 +692,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4A8E6671CE04CE700FC74D1 /* Build configuration list for PBXNativeTarget "InvoiceApp" */;
 			buildPhases = (
-				333868A0F566E54815730EBD /* Check Pods Manifest.lock */,
+				0B506C33C93CBDE9A25A49DA /* 📦 Check Pods Manifest.lock */,
 				A4A8E63B1CE04CE700FC74D1 /* Sources */,
 				A4A8E63C1CE04CE700FC74D1 /* Frameworks */,
 				A4A8E63D1CE04CE700FC74D1 /* Resources */,
-				5390CDD3A1E3A889F4E9FE0C /* Embed Pods Frameworks */,
-				77DC30CAA833747EA0B2977D /* Copy Pods Resources */,
+				94934008C4496701C10402D9 /* 📦 Embed Pods Frameworks */,
+				547A0E28A01F9B137F513AA2 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -826,14 +828,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		333868A0F566E54815730EBD /* Check Pods Manifest.lock */ = {
+		0B506C33C93CBDE9A25A49DA /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,34 +843,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5390CDD3A1E3A889F4E9FE0C /* Embed Pods Frameworks */ = {
+		547A0E28A01F9B137F513AA2 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InvoiceApp/Pods-InvoiceApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77DC30CAA833747EA0B2977D /* Copy Pods Resources */ = {
+		94934008C4496701C10402D9 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InvoiceApp/Pods-InvoiceApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1121,7 +1123,7 @@
 		};
 		A4A8E6681CE04CE700FC74D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F5AE3380A5D7F93076F95F2 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8CBC4A4EBF65B09FE64FFAEF /* Pods-InvoiceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1140,7 +1142,7 @@
 		};
 		A4A8E6691CE04CE700FC74D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D02B7429D33EEEC123C5649 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 875BA45DB21F2F19DD7F9B70 /* Pods-InvoiceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
