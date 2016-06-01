@@ -201,29 +201,41 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf0.text = String(price - inputPrice)
-                                    
-                                    
-                                    if language != "en" {
-                                        
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf0.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
                                     } else {
-                                        
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf0.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
                                     }
-                                    
-                                    
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf0.text = String(price - inputPrice)
+                                    }
                                 }
                             }
                         } else if textField.tag == 2 {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf7.text = String(price - inputPrice)
-                                    if language != "en" {
-                                        
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf7.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
                                     } else {
-                                        
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf7.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    }
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf7.text = String(price - inputPrice)
                                     }
                                 }
                             }
@@ -237,16 +249,42 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf0.text = String(price - inputPrice)
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf0.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    } else {
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf0.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    }
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf0.text = String(price - inputPrice)
+                                    }
                                 }
                             }
                         } else if textField.tag == 2 {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf19.text = String(price - inputPrice)
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf19.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    } else {
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf19.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    }
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf19.text = String(price - inputPrice)
+                                    }
                                 }
                             }
                         }
@@ -259,16 +297,42 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf7.text = String(price - inputPrice)
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf7.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    } else {
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf7.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    }
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf7.text = String(price - inputPrice)
+                                    }
                                 }
                             }
                         } else if textField.tag == 1 {
                             if inputPrice > price {
                                 errorShow("Warning", message: "Your input price is GREATER than your total price")
                             } else {
-                                if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
-                                    tf19.text = String(price - inputPrice)
+                                if language != "en" {
+                                    if newString.containsString(",") {
+                                        let replaceString = (newString as String).replace(",", withString:".")
+                                        if let inputPrice = Double(replaceString as String)?.roundToPlaces(2) {
+                                            tf19.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    } else {
+                                        if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                            tf19.text = String(price - inputPrice).replace(".", withString:",")
+                                        }
+                                    }
+                                } else {
+                                    if let inputPrice = Double(newString as String)?.roundToPlaces(2) {
+                                        tf19.text = String(price - inputPrice)
+                                    }
                                 }
                             }
                         }
