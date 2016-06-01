@@ -57,15 +57,13 @@ class ReceiptReviewViewController: UITableViewController {
     }
     
     func processShowTax() {
-        let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString
         
         if let price = passedTaxPriceObject {
             if price.priceTax19 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "19%"
-                    if language != "en" {
-                        let replaceString = String(price.priceTax19).replace(".", withString:",")
-                        tfFirstTax.text = replaceString
+                    if passedInvoiceObject?.currencyCode == "EUR" {
+                        tfFirstTax.text = String(price.priceTax19).replace(".", withString:",")
                     } else {
                         tfFirstTax.text = String(price.priceTax19)
                     }
@@ -74,18 +72,16 @@ class ReceiptReviewViewController: UITableViewController {
             if price.priceTax7 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "7%"
-                    if language != "en" {
-                        let replaceString = String(price.priceTax7).replace(".", withString:",")
-                        tfFirstTax.text = replaceString
+                    if passedInvoiceObject?.currencyCode == "EUR" {
+                        tfFirstTax.text = String(price.priceTax7).replace(".", withString:",")
                     } else {
                         tfFirstTax.text = String(price.priceTax7)
                     }
                     
                 } else if tfSecondTax.text == "" {
                     lblSecondTax.text = "7%"
-                    if language != "en" {
-                        let replaceString = String(price.priceTax7).replace(".", withString:",")
-                        tfSecondTax.text = replaceString
+                    if passedInvoiceObject?.currencyCode == "EUR" {
+                        tfSecondTax.text = String(price.priceTax7).replace(".", withString:",")
                     } else {
                         tfSecondTax.text = String(price.priceTax7)
                     }
@@ -94,17 +90,15 @@ class ReceiptReviewViewController: UITableViewController {
             if price.priceTax0 != 0 {
                 if tfFirstTax.text == "" {
                     lblFirstTax.text = "0%"
-                    if language != "en" {
-                        let replaceString = String(price.priceTax0).replace(".", withString:",")
-                        tfFirstTax.text = replaceString
+                    if passedInvoiceObject?.currencyCode == "EUR" {
+                        tfFirstTax.text = String(price.priceTax0).replace(".", withString:",")
                     } else {
                         tfFirstTax.text = String(price.priceTax0)
                     }
                 } else if tfSecondTax.text == "" {
                     lblSecondTax.text = "0%"
-                    if language != "en" {
-                        let replaceString = String(price.priceTax0).replace(".", withString:",")
-                        tfSecondTax.text = replaceString
+                    if passedInvoiceObject?.currencyCode == "EUR" {
+                        tfSecondTax.text = String(price.priceTax0).replace(".", withString:",")
                     } else {
                         tfSecondTax.text = String(price.priceTax0)
                     }
@@ -122,13 +116,14 @@ class ReceiptReviewViewController: UITableViewController {
             if language != "en" {
                 tfCategory.text = NSLocalizedString(receipt.category + "Review",comment:"")
                 tfType.text = NSLocalizedString(receipt.type + "Review",comment:"")
-                //
-                let replaceString = String(receipt.price).replace(".", withString:",")
-                tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + replaceString
             } else {
                 tfCategory.text = NSLocalizedString(receipt.category,comment:"")
                 tfType.text = NSLocalizedString(receipt.type,comment:"")
-                //
+            }
+            
+            if passedInvoiceObject?.currencyCode == "EUR" {
+                tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price).replace(".", withString:",")
+            } else {
                 tfPrice.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price)
             }
         }
