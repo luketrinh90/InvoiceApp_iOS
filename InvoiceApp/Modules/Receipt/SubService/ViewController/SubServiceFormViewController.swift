@@ -93,7 +93,7 @@ class SubServiceFormViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        return Helper.limitCharacter(textField, range: range, string: string, length: 150)
+        return Helper.limitCharacter(textField, range: range, string: string, length: 50)
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         onNextPressed(self)

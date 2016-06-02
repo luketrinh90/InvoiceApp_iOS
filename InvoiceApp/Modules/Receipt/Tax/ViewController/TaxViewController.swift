@@ -89,7 +89,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
         switch string {
         case "0","1","2","3","4","5","6","7","8","9":
             inputPrice(textField, range: range, string: string)
-            return true
+            return Helper.limitCharacter(textField, range: range, string: string, length: 14)
         case ".":
             let array = textField.text?.characters.map { String($0) }
             var decimalCount = 0
@@ -173,7 +173,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onAddPressed(sender: AnyObject) {
         if tf19.text == "" && tf7.text == "" && tf0.text == "" {
-            errorShow("Warning", message: "Please input price in the field")
+            errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Please input price in the field",comment:""))
         } else {
             if let model = viewModel {
                 model.updateTaxPrice()
@@ -199,7 +199,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                     if let price = passedReceiptObject?.price {
                         if textField.tag == 1 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {
@@ -220,7 +220,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             }
                         } else if textField.tag == 2 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {
@@ -247,7 +247,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                     if let price = passedReceiptObject?.price {
                         if textField.tag == 0 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {
@@ -268,7 +268,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             }
                         } else if textField.tag == 2 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {
@@ -295,7 +295,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                     if let price = passedReceiptObject?.price {
                         if textField.tag == 0 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {
@@ -316,7 +316,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                             }
                         } else if textField.tag == 1 {
                             if inputPrice > price {
-                                errorShow("Warning", message: "Your input price is GREATER than your total price")
+                                errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
                             } else {
                                 if language != "en" {
                                     if newString.containsString(",") {

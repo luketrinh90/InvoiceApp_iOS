@@ -109,7 +109,7 @@ class InvoiceFormViewController: UIViewController, UITextFieldDelegate, UIPicker
         if textField.tag == 2 || textField.tag == 3 {
             return false
         }
-        return Helper.limitCharacter(textField, range: range, string: string, length: 150)
+        return Helper.limitCharacter(textField, range: range, string: string, length: 50)
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let model = viewModel {

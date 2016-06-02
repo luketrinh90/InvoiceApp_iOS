@@ -204,7 +204,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
             switch string {
             case "0","1","2","3","4","5","6","7","8","9":
                 inputTotalPrice(textField, range: range, string: string)
-                return true
+                return Helper.limitCharacter(textField, range: range, string: string, length: 14)
             case ".":
                 let array = textField.text?.characters.map { String($0) }
                 var decimalCount = 0
@@ -240,7 +240,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
                 return false
             }
         }
-        return Helper.limitCharacter(textField, range: range, string: string, length: 150)
+        return Helper.limitCharacter(textField, range: range, string: string, length: 50)
     }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         //        if let model = viewModel {

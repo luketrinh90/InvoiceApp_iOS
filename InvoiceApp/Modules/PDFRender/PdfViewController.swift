@@ -90,19 +90,19 @@ class PDFViewController: UIViewController, UIActionSheetDelegate, UIWebViewDeleg
     
     @IBAction func exportOptions(sender: AnyObject) {
         
-        let optionMenu = UIAlertController(title: "Export to: ", message: "Choose Option", preferredStyle: .ActionSheet)
+        let optionMenu = UIAlertController(title: NSLocalizedString("Export to: ",comment:""), message: NSLocalizedString("Choose Option",comment:""), preferredStyle: .ActionSheet)
         
         // 2
-        let deleteAction = UIAlertAction(title: "Printer", style: .Default, handler: {
+        let deleteAction = UIAlertAction(title: NSLocalizedString("Printer",comment:""), style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.printPDF()
         })
-        let saveAction = UIAlertAction(title: "Mail", style: .Default, handler: {
+        let saveAction = UIAlertAction(title: NSLocalizedString("Mail",comment:""), style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
             self.sendMail()
         })
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel",comment:""), style: .Cancel, handler: {
             (alert: UIAlertAction!) -> Void in
         })
         
