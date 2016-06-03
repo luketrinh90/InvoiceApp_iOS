@@ -120,9 +120,9 @@ class PDFRenderer {
                 }
                 let drawTextFrame = CGRectMake(CGFloat(132*5 + 10), newOrigin + 10 + CGFloat(rowHeight), CGFloat(columnWidth), CGFloat(rowHeight))
                 if invoice.currencyCode == "EUR" {
-                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(total).replace(".", withString: ","))", frameRect: drawTextFrame)
+                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(Double(total).roundToPlaces(2)).replace(".", withString: ","))", frameRect: drawTextFrame)
                 } else {
-                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(total)", frameRect: drawTextFrame)
+                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(Double(total).roundToPlaces(2))", frameRect: drawTextFrame)
                 }
                 return 0
             }
@@ -190,9 +190,9 @@ class PDFRenderer {
                 //Price
                 case 5:
                     if invoice.currencyCode == "EUR" {
-                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(receipt.priceAfter).replace(".", withString: ","))")
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(Double(receipt.priceAfter).roundToPlaces(2)).replace(".", withString: ","))")
                     } else {
-                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(receipt.priceAfter)")
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(Double(receipt.priceAfter).roundToPlaces(2))")
                     }
                 default:
                     drawTextString = ""
