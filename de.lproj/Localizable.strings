@@ -13,6 +13,7 @@
 "Reisekosten" = "Travel Costs";
 "Bewirtung" = "Service";
 "Übernachtung" = "Overnight Stay";
+"Andere" = "Others";
 
 //Showcase
 "Anschaffung" = "Purchase";
@@ -44,6 +45,7 @@
 "Travel CostsReview" = "Reisekosten";
 "ServiceReview" = "Bewirtung";
 "Overnight StayReview" = "Übernachtung";
+"OthersReview" = "Andere";
 
 //Showcase
 "PurchaseReview" = "Anschaffung";
@@ -62,6 +64,9 @@
 "BreakfastReview" = "Frühstück";
 "LunchReview" = "Mittagessen";
 "DinnerReview" = "Abendessen";
+
+//Others
+"Review" = "";
 
 //Service & Overnight Stay
 "Breakfast" = "Frühstück";

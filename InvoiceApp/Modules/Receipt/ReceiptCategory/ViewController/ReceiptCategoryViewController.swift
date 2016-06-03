@@ -65,9 +65,6 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDelegate, UITa
         
         if let cate = category {
             cell.lblName.text = cate[indexPath.row]
-            //            if cate[indexPath.row] == passedReceiptObject?.category {
-            //                cell.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
-            //            }
         }
         
         return cell
@@ -75,13 +72,26 @@ class ReceiptCategoryViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let cate = category {
-            if let vc = self.storyboard?.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.ReceiptSubCategoryViewController) as? ReceiptSubCategoryViewController,
-                let nav = navigationController {
-                try! realm.write {
-                    passedReceiptObject?.category = NSLocalizedString(cate[indexPath.row],comment:"")
-                    vc.passedInvoiceObject = passedInvoiceObject
-                    vc.passedReceiptObject = passedReceiptObject
-                    nav.pushViewController(vc, animated: true)
+            if NSLocalizedString(cate[indexPath.row],comment:"") == "Others" {
+                if let vc = self.storyboard?.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.ReceiptFormContainerViewController) as? ReceiptFormContainerViewController,
+                    let nav = navigationController {
+                    try! realm.write {
+                        passedReceiptObject?.category = NSLocalizedString(cate[indexPath.row],comment:"")
+                        passedReceiptObject?.type = ""
+                        vc.passedInvoiceObject = passedInvoiceObject
+                        vc.passedReceiptObject = passedReceiptObject
+                        nav.pushViewController(vc, animated: true)
+                    }
+                }
+            } else {
+                if let vc = self.storyboard?.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.ReceiptSubCategoryViewController) as? ReceiptSubCategoryViewController,
+                    let nav = navigationController {
+                    try! realm.write {
+                        passedReceiptObject?.category = NSLocalizedString(cate[indexPath.row],comment:"")
+                        vc.passedInvoiceObject = passedInvoiceObject
+                        vc.passedReceiptObject = passedReceiptObject
+                        nav.pushViewController(vc, animated: true)
+                    }
                 }
             }
         }

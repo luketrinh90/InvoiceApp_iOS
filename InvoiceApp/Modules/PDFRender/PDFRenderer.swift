@@ -119,7 +119,11 @@ class PDFRenderer {
                     total += data[r].price
                 }
                 let drawTextFrame = CGRectMake(CGFloat(132*5 + 10), newOrigin + 10 + CGFloat(rowHeight), CGFloat(columnWidth), CGFloat(rowHeight))
-                self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(total)", frameRect: drawTextFrame)
+                if invoice.currencyCode == "EUR" {
+                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(total).replace(".", withString: ","))", frameRect: drawTextFrame)
+                } else {
+                    self.drawText("\(Helper.showCurrencySymbol(invoice.currencyCode))\(total)", frameRect: drawTextFrame)
+                }
                 return 0
             }
             
@@ -163,17 +167,34 @@ class PDFRenderer {
                 //Tax
                 case 4:
                     if tax.priceTax19 > 0 {
-                        drawTextString = "19%: \(tax.priceTax19)\n"
+                        if invoice.currencyCode == "EUR" {
+                            drawTextString = "19%: \(String(tax.priceTax19).replace(".", withString: ","))\n"
+                        } else {
+                            drawTextString = "19%: \(tax.priceTax19)\n"
+                        }
                     }
                     if tax.priceTax7 > 0 {
-                        drawTextString = drawTextString.stringByAppendingString("7%: \(tax.priceTax7)\n")
+                        if invoice.currencyCode == "EUR" {
+                            drawTextString = drawTextString.stringByAppendingString("7%: \(String(tax.priceTax7).replace(".", withString: ","))\n")
+                        } else {
+                            drawTextString = drawTextString.stringByAppendingString("7%: \(tax.priceTax7)\n")
+                        }
                     }
                     if tax.priceTax0 > 0 {
-                        drawTextString = drawTextString.stringByAppendingString("0%: \(tax.priceTax0)")
+                        if invoice.currencyCode == "EUR" {
+                            drawTextString = drawTextString.stringByAppendingString("0%: \(String(tax.priceTax0).replace(".", withString: ","))")
+                        } else {
+                            drawTextString = drawTextString.stringByAppendingString("0%: \(tax.priceTax0)")
+                        }
                     }
                 //Price
                 case 5:
-                    drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(receipt.price)")
+                    if invoice.currencyCode == "EUR" {
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(receipt.price).replace(".", withString: ","))")
+                    } else {
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(receipt.price)")
+                    }
+                    
                 default:
                     drawTextString = ""
                 }

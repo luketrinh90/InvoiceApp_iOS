@@ -78,7 +78,7 @@
 "WT4-dx-F4Z.text" = "Label";
 
 /* Class = "UILabel"; text = "Tax & Price"; ObjectID = "Xex-Dc-p87"; */
-"Xex-Dc-p87.text" = "Tax & Preis";
+"Xex-Dc-p87.text" = "Steuer & Preis";
 
 /* Class = "UILabel"; text = ">"; ObjectID = "XuQ-oS-YHE"; */
 "XuQ-oS-YHE.text" = ">";
@@ -176,8 +176,11 @@
 /* Class = "UILabel"; text = "Name"; ObjectID = "3KY-ID-U0q"; */
 "3KY-ID-U0q.text" = "Name";
 
-/* Class = "UILabel"; text = "Price"; ObjectID = "cgb-qZ-8fv"; */
-"cgb-qZ-8fv.text" = "Preis";
+/* Class = "UILabel"; text = "Price Before"; ObjectID = "cgb-qZ-8fv"; */
+"cgb-qZ-8fv.text" = "Preis Vorher";
+
+/* Class = "UILabel"; text = "Price After"; ObjectID = "Twe-eQ-wR9"; */
+"Twe-eQ-wR9.text" = "Preis Nach";
 
 /* Class = "UILabel"; text = "Note"; ObjectID = "Q3Y-yt-GIZ"; */
 "Q3Y-yt-GIZ.text" = "Hinweis";
@@ -217,3 +220,6 @@
 
 /* Class = "UILabel"; text = "Photo"; ObjectID = "w7k-H0-LMw"; */
 "w7k-H0-LMw.text" = "Foto";
+
+/* Class = "UILabel"; text = "Tax"; ObjectID = "lC1-jE-TkI"; */
+"lC1-jE-TkI.text" = "Steuer";

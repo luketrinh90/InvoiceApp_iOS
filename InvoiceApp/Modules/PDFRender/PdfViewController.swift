@@ -14,9 +14,11 @@ class PDFViewController: UIViewController, UIActionSheetDelegate, UIWebViewDeleg
     
     var passedInvoiceObject: Invoice?
     
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var reviewPdf: UIWebView!
     
     override func viewDidLoad() {
+        lblTitle.text = passedInvoiceObject?.name
         print("Invoice id = \(passedInvoiceObject?.id)")
     }
     
