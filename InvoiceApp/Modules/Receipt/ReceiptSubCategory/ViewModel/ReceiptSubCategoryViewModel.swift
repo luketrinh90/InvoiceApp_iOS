@@ -18,7 +18,7 @@ class ReceiptSubCategoryViewModel: NSObject {
     
     func processOverStay(overStayType: String) {
         if let dele = delegate {
-            
+  
             let obj = realm.objects(OverStay).filter("invoiceID = \(dele.passedInvoiceObject!.id)").filter("receiptID = \(dele.passedReceiptObject!.id)")
             if obj.count > 0 {
                 try! realm.write {

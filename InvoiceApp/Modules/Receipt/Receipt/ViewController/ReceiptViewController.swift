@@ -72,9 +72,9 @@ class ReceiptViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.lblReceiptDate.text = NSLocalizedString("Date: ",comment:"") + dateToString(realm.objects(Receipt).sorted("id", ascending: false).filter("invoiceID = \(passedInvoiceObject!.id)").filter("isCompleted = 1")[indexPath.row].date)
         
         if passedInvoiceObject?.currencyCode == "EUR" {
-            cell.lblReceiptPrice.text = NSLocalizedString("Price: ", comment: "") + Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(realm.objects(Receipt).sorted("id", ascending: false).filter("invoiceID = \(passedInvoiceObject!.id)").filter("isCompleted = 1")[indexPath.row].price).replace(".", withString:",")
+            cell.lblReceiptPrice.text = NSLocalizedString("Price: ", comment: "") + Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(realm.objects(Receipt).sorted("id", ascending: false).filter("invoiceID = \(passedInvoiceObject!.id)").filter("isCompleted = 1")[indexPath.row].priceAfter).roundToPlaces(2)).replace(".", withString:",")
         } else {
-            cell.lblReceiptPrice.text = NSLocalizedString("Price: ", comment: "") + Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(realm.objects(Receipt).sorted("id", ascending: false).filter("invoiceID = \(passedInvoiceObject!.id)").filter("isCompleted = 1")[indexPath.row].price)
+            cell.lblReceiptPrice.text = NSLocalizedString("Price: ", comment: "") + Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(realm.objects(Receipt).sorted("id", ascending: false).filter("invoiceID = \(passedInvoiceObject!.id)").filter("isCompleted = 1")[indexPath.row].priceAfter).roundToPlaces(2))
         }
         return cell
     }

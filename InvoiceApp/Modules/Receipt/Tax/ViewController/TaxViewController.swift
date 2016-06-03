@@ -196,7 +196,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
             for (key, value) in priceOptions! {
                 if key == 19 && value == false {
                     ///////////////////////
-                    if let price = passedReceiptObject?.price {
+                    if let price = passedReceiptObject?.priceBefore {
                         if textField.tag == 1 {
                             if inputPrice > price {
                                 errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
@@ -244,7 +244,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                     ///////////////////////
                 } else if key == 7 && value == false {
                     ///////////////////////
-                    if let price = passedReceiptObject?.price {
+                    if let price = passedReceiptObject?.priceBefore {
                         if textField.tag == 0 {
                             if inputPrice > price {
                                 errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))
@@ -292,7 +292,7 @@ class TaxViewController: UIViewController, UITextFieldDelegate {
                     ///////////////////////
                 } else if key == 0 && value == false {
                     ///////////////////////
-                    if let price = passedReceiptObject?.price {
+                    if let price = passedReceiptObject?.priceBefore {
                         if textField.tag == 0 {
                             if inputPrice > price {
                                 errorShow(NSLocalizedString("Warning",comment:""), message: NSLocalizedString("Your input price is GREATER than your total price",comment:""))

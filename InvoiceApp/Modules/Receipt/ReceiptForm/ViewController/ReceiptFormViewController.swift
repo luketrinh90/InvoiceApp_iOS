@@ -76,7 +76,7 @@ class ReceiptFormViewController: UITableViewController, UITextFieldDelegate, UII
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let price = passedReceiptObject?.price {
+        if let price = passedReceiptObject?.priceBefore {
             if price != 0.0 {
                 
                 let language = NSBundle.mainBundle().preferredLocalizations.first! as NSString

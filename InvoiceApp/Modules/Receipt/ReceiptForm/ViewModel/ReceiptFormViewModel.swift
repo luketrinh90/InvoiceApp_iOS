@@ -169,13 +169,13 @@ class ReceiptFormViewModel: NSObject {
                     
                     if newString.containsString(",") {
                         let replaceString = newString.replace(",", withString:".")
-                        dele.passedReceiptObject?.price = Double(replaceString)!.roundToPlaces(2)
+                        dele.passedReceiptObject?.priceBefore = Double(replaceString)!.roundToPlaces(2)
                     } else {
-                        dele.passedReceiptObject?.price = Double(newString)!.roundToPlaces(2)
+                        dele.passedReceiptObject?.priceBefore = Double(newString)!.roundToPlaces(2)
                     }
                     
                 } else {
-                    dele.passedReceiptObject?.price = 0.0
+                    dele.passedReceiptObject?.priceBefore = 0.0
                 }
                 print("DEFAULT DEFAULT DEFAULT DEFAULT DEFAULT PRICE \(dele.passedReceiptObject)")
             }

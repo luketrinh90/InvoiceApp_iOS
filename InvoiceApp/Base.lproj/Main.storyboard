@@ -1143,7 +1143,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-Yd-uIA">
-                                                    <rect key="frame" x="185" y="113" width="395" height="40"/>
+                                                    <rect key="frame" x="180" y="113" width="400" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="IEN-ml-D7z"/>
                                                     </constraints>
@@ -1160,7 +1160,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8E-Zb-sbk">
-                                                    <rect key="frame" x="185" y="167" width="395" height="40"/>
+                                                    <rect key="frame" x="180" y="167" width="400" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -1186,7 +1186,7 @@
                                                 <constraint firstItem="T8E-Zb-sbk" firstAttribute="width" secondItem="rcq-Yd-uIA" secondAttribute="width" id="rHe-ED-Gen"/>
                                                 <constraint firstItem="Twe-eQ-wR9" firstAttribute="top" secondItem="cgb-qZ-8fv" secondAttribute="bottom" constant="30" id="rZP-Rp-FXs"/>
                                                 <constraint firstItem="Nqh-pk-ej1" firstAttribute="centerY" secondItem="Twe-eQ-wR9" secondAttribute="centerY" id="rfX-fZ-gy7"/>
-                                                <constraint firstItem="rcq-Yd-uIA" firstAttribute="leading" secondItem="CBg-0a-iRd" secondAttribute="trailing" constant="15" id="srJ-bH-zvL"/>
+                                                <constraint firstItem="rcq-Yd-uIA" firstAttribute="leading" secondItem="CBg-0a-iRd" secondAttribute="trailing" constant="10" id="srJ-bH-zvL"/>
                                                 <constraint firstItem="Nqh-pk-ej1" firstAttribute="height" secondItem="Guu-re-sCI" secondAttribute="height" id="uY0-oO-oMy"/>
                                                 <constraint firstItem="T8E-Zb-sbk" firstAttribute="height" secondItem="rcq-Yd-uIA" secondAttribute="height" id="x0i-Tu-hUv"/>
                                                 <constraint firstAttribute="trailing" secondItem="Guu-re-sCI" secondAttribute="trailing" constant="20" id="yT3-2h-xIG"/>

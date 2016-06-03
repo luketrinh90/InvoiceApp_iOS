@@ -42,7 +42,8 @@ class ReceiptViewModel: NSObject {
             receipt.invoiceID = dele.passedInvoiceObject!.id
             receipt.id = receipt.incrementID(dele.passedInvoiceObject!.id)
             receipt.name = ""
-            receipt.price = 0.0
+            receipt.priceBefore = 0.0
+            receipt.priceAfter = 0.0
             receipt.date = NSDate()
             receipt.note = ""
             receipt.category = ""

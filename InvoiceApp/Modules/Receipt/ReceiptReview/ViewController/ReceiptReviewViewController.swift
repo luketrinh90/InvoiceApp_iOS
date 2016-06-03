@@ -121,9 +121,20 @@ class ReceiptReviewViewController: UITableViewController {
             }
             
             if passedInvoiceObject?.currencyCode == "EUR" {
-                tfPriceBefore.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price).replace(".", withString:",")
+                tfPriceBefore.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(receipt.priceBefore).roundToPlaces(2)).replace(".", withString:",")
+                
+                if receipt.priceAfter == receipt.priceBefore {
+                    tfPriceAfter.text = ""
+                } else {
+                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(receipt.priceAfter).roundToPlaces(2)).replace(".", withString:",")
+                }
             } else {
-                tfPriceBefore.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price)
+                tfPriceBefore.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(receipt.priceBefore).roundToPlaces(2))
+                if receipt.priceAfter == receipt.priceBefore {
+                    tfPriceAfter.text = ""
+                } else {
+                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(Double(receipt.priceAfter).roundToPlaces(2))
+                }
             }
         }
         
@@ -149,29 +160,7 @@ class ReceiptReviewViewController: UITableViewController {
             }
             tfTimes.text = String(overStay.numberOfTimes)
         }
-        
-        calculatePriceAfter()
         loadImageFromPath()
-    }
-    
-    func calculatePriceAfter() {
-        if let receipt = passedReceiptObject {
-            if let service = passedServiceObject {
-                if passedInvoiceObject?.currencyCode == "EUR" {
-                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price - service.tax).replace(".", withString:",")
-                } else {
-                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price - service.tax)
-                }
-            }
-            if let overStay = passedOverStayObject {
-                if passedInvoiceObject?.currencyCode == "EUR" {
-                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price - overStay.totalTax).replace(".", withString:",")
-                } else {
-                    tfPriceAfter.text = Helper.showCurrencySymbol(passedInvoiceObject!.currencyCode) + String(receipt.price - overStay.totalTax)
-                }
-            }
-            
-        }
     }
     
     func loadImageFromPath() -> UIImage? {

@@ -116,7 +116,7 @@ class PDFRenderer {
                 
                 var total:Double = 0
                 for r in 0...rowCount-1 {
-                    total += data[r].price
+                    total += data[r].priceAfter
                 }
                 let drawTextFrame = CGRectMake(CGFloat(132*5 + 10), newOrigin + 10 + CGFloat(rowHeight), CGFloat(columnWidth), CGFloat(rowHeight))
                 if invoice.currencyCode == "EUR" {
@@ -190,11 +190,10 @@ class PDFRenderer {
                 //Price
                 case 5:
                     if invoice.currencyCode == "EUR" {
-                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(receipt.price).replace(".", withString: ","))")
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(String(receipt.priceAfter).replace(".", withString: ","))")
                     } else {
-                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(receipt.price)")
+                        drawTextString = ("\(Helper.showCurrencySymbol(invoice.currencyCode))\(receipt.priceAfter)")
                     }
-                    
                 default:
                     drawTextString = ""
                 }

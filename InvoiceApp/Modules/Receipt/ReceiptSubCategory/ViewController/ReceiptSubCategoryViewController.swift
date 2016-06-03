@@ -98,7 +98,7 @@ class ReceiptSubCategoryViewController: UIViewController, UITableViewDelegate, U
                 if let vc = self.storyboard?.instantiateViewControllerWithIdentifier(NotificationConstants.ViewController.OvernightStayViewController) as? OvernightStayViewController,
                     let nav = navigationController {
                     if let model = viewModel {
-                        model.processOverStay(arr[indexPath.row])
+                        model.processOverStay(NSLocalizedString(arr[indexPath.row],comment:""))
                         try! realm.write {
                             passedReceiptObject?.type = NSLocalizedString(arr[indexPath.row],comment:"")
                             vc.passedInvoiceObject = passedInvoiceObject

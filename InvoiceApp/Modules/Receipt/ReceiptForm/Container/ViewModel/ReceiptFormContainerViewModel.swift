@@ -67,7 +67,7 @@ class ReceiptFormContainerViewModel: NSObject {
             receipt!.name = trimString(tfName)
             receipt!.note = trimString(tfNote)
             receipt!.date = NSDate()
-            //receipt
+            receipt!.priceAfter = receipt!.priceBefore
             receipt!.isCompleted = true
             
             if taxPrice?.priceTax19 != 0 || taxPrice?.priceTax7 != 0 || taxPrice?.priceTax0 != 0 {
@@ -76,9 +76,14 @@ class ReceiptFormContainerViewModel: NSObject {
             
             if receipt?.category == "Service" {
                 service!.isCompleted = true
+                
+                receipt!.priceAfter = receipt!.priceBefore - service!.tax
+                
             }
             if receipt?.category == "Overnight Stay" {
                 overStay!.isCompleted = true
+                
+                receipt!.priceAfter = receipt!.priceBefore - overStay!.totalTax
             }
             
             let viewControllers: [UIViewController] = delegate!.navigationController!.viewControllers as [UIViewController]

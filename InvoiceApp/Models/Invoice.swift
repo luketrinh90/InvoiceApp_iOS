@@ -36,7 +36,8 @@ class Receipt: Object {
     dynamic var invoiceID = 0
     dynamic var id = 0
     dynamic var name = ""
-    dynamic var price = 0.0
+    dynamic var priceBefore = 0.0
+    dynamic var priceAfter = 0.0
     dynamic var date = NSDate()
     dynamic var note = ""
     dynamic var category = ""
