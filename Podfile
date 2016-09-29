@@ -1,10 +1,10 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
 def shared_pods
     pod 'RealmSwift'
-    pod 'PKHUD', '~> 3.1.0'
+    pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD.git'
     pod 'UITextField+Shake', '~> 1.1.2'
 end
 
