@@ -4,8 +4,10 @@ use_frameworks!
 
 def shared_pods
     pod 'RealmSwift'
-    pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD.git'
+    pod 'PKHUD', '~> 3.1.0'
     pod 'UITextField+Shake', '~> 1.1.2'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'InvoiceApp' do

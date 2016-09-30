@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.8.2):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.9)
   - PKHUD (3.1.0)
   - Realm (0.102.1):
     - Realm/Headers (= 0.102.1)
@@ -8,16 +11,20 @@ PODS:
   - UITextField+Shake (1.1.2)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - PKHUD (~> 3.1.0)
   - RealmSwift
   - UITextField+Shake (~> 1.1.2)
 
 SPEC CHECKSUMS:
+  Crashlytics: 27acca95a01b042a8294291dd6dff27f8f6af6d7
+  Fabric: bc5bec42cef4bcf1ee3ce0e218fc518e4b44dfbb
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   Realm: 5254be610db3e5024879684717bf038990bb59ec
   RealmSwift: 3e24e6bcf56d98ccc134f4909e00839b81a659af
   UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
 
-PODFILE CHECKSUM: c2c8ec1f783f3e58024d6d4abc9c93fd0ff20f03
+PODFILE CHECKSUM: 398531bb80dde6ad88fb29a468ba3e4c4ef4a5ea
 
 COCOAPODS: 1.1.0.rc.2

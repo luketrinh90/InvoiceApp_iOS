@@ -698,6 +698,7 @@
 				A4A8E63D1CE04CE700FC74D1 /* Resources */,
 				94934008C4496701C10402D9 /* [CP] Embed Pods Frameworks */,
 				547A0E28A01F9B137F513AA2 /* [CP] Copy Pods Resources */,
+				A415CEAD1D9E0F5200821429 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -872,6 +873,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InvoiceApp/Pods-InvoiceApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A415CEAD1D9E0F5200821429 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 379f9d1b32592612592b2824a442465e0b8d8c2f c167414a53b561ef7d2b41b93d2f92184685252ae824ef087eb936f212d0aaa0";
 		};
 /* End PBXShellScriptBuildPhase section */
 
